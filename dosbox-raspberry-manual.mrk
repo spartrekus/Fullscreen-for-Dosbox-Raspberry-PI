@@ -1,0 +1,63 @@
+
+/// this is an Unimark document
+!tex
+
+!begin
+
+!= Introduction
+This description will help you to use Dosbox with old retro games.
+The example is dedicated to Dosbox with Eye of Beholder (EOB).
+
+!= Content
+The issue with Dosbox for old games on the PI is that 
+it issues Surface for displaying graphics. 
+
+Today SDL 1.2 has not the capability to scale or stretch images. 
+This is visible in emulators such as UAE,  hatari,... which are 
+using SDL 1.2. 
+With using a more high-tech library SDL 2.0, stretching would be easy for
+programmers.
+
+Dosbox uses surface, but it is also possible to use other drivers.
+Since OPENGL is available now on the Raspberry PI, it would allow 
+larger range of opportunities, without cycling the CPU and getting 
+very hot the PI (high CPU usage).
+
+!= Steps to install
+The first step is to go to Raspi config: raspi-config
+and go to the menu to enable the full OpenGL.
+This will not improve much performances, 
+but it will give you another driver : Opengl.
+
+After restart you may use the following config. I have a large 
+monitor, which can  1920x1080 (with overscan change).
+
+I have set the large enough size for OpenGL in Dosbox.
+ 
+!bim
+!- fullscreen=false
+!- fulldouble=false
+!- fullresolution=1680x1050
+!- windowresolution=1680x1050
+!- output=opengl
+!- autolock=true
+!- sensitivity=100
+!- waitonerror=true
+!- priority=higher,normal
+!- mapperfile=mapper-0.74.map
+!- usescancodes=true
+!eim
+
+!= Conclusion
+Raspberry PI has great capabilities. Dosbox is amazing
+and it is possible to play Retro PC games on DOS. 
+EOB is one of the hundreds of fantastic role games.
+This method takes care about avoiding bloating and high CPU usage.
+
+Enjoy Retro Gaming On Raspberry PI.
+
+
+!enddoc
+
+
+
